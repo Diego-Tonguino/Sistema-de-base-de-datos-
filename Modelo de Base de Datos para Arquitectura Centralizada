@@ -1,0 +1,23 @@
+Componentes principales: 
+
+Servidor Central: Un único servidor que almacena toda la base de datos. 
+
+Clientes: Accedan al servidor central para consultar o modificar los datos. 
+
+Características: 
+
+Centralización: Todos los datos se encuentran en un único lugar (el servidor central). 
+
+Acceso: Los clientes se comunican directamente con el servidor para realizar operaciones. 
+
+Ventajas: 
+
+Simplicidad: Fácil administración y mantenimiento de la base de datos. 
+
+Consistencia: Todos los clientes ven los mismos datos en todo momento. 
+
+Desventajas: 
+
+Punto Único de Fallo: Si el servidor central falla, toda la base de datos se vuelve inaccesible. 
+
+Escalamiento Limitado: Difícil de escalar conforme crece la cantidad de datos o usuarios. 
