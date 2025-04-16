@@ -1,0 +1,53 @@
+Configuración en el Servidor Maestro (Windows) 
+
+Configuración del Servidor SQL: 
+
+Asegúrate de que el servidor SQL en Windows esté configurado y funcionando correctamente. 
+
+Configuración de la Replicación: 
+
+Abre SQL Server Management Studio (SSMS) en el servidor Windows. 
+
+Conéctate al servidor y haz clic derecho en la instancia del servidor. 
+
+Selecciona "Propiedades" y luego "Replicación". 
+
+Activa la replicación y selecciona el tipo "Maestro". 
+
+Configura las opciones de seguridad y permisos adecuados para la replicación. 
+
+Generación de Copia de Seguridad: 
+
+Realiza una copia de seguridad completa de la base de datos que deseas replicar. 
+
+Configuración en el Servidor Esclavo (Ubuntu) 
+
+Instalación de SQL Server en Ubuntu: 
+
+Instala SQL Server en Ubuntu. Puedes seguir las instrucciones de instalación proporcionadas por Microsoft para Ubuntu. 
+
+Configuración del Servidor SQL en Ubuntu: 
+
+Configura el servidor SQL en Ubuntu para que tenga la misma estructura de base de datos que el servidor maestro en Windows. 
+
+Configuración de la Replicación: 
+
+En SSMS en el servidor Windows, genera un script de creación de la publicación y suscripción. 
+
+Ejecuta este script en SSMS en el servidor Ubuntu para configurar la suscripción al servidor maestro en Windows. 
+
+Monitoreo y Verificación: 
+
+Monitorea los registros de replicación para asegurarte de que la replicación esté funcionando correctamente. 
+
+Realiza pruebas de sincronización para verificar que los datos se estén replicando adecuadamente. 
+
+Consideraciones Adicionales 
+
+Firewall y Redes: Asegúrate de que los puertos necesarios estén abiertos en ambos servidores para permitir la comunicación de replicación. 
+
+Seguridad y Autenticación: Configura adecuadamente la seguridad y la autenticación para garantizar que solo los 
+servidores autorizados puedan participar en la replicación. 
+
+Siguiendo estos pasos, deberías poder configurar la replicación maestro-esclavo entre SQL Server en Windows y 
+SQL Server en Ubuntu satisfactoriamente. Si necesitas más detalles sobre algún paso específico o tienes alguna pregunta adicional
