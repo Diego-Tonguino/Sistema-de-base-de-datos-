@@ -1,0 +1,105 @@
+SISTEMA DE BASE DE DATOS DISTRIBUIDAS
+Clase 2 - 21/03/2025
+Tablas: Registros y campos que almacenan información entre sí.
+Campos: Son las columnas de una tabla que representan los atributos específicos de los datos que están almacenados.
+Registros: Son filas dentro de una tabla. Cada registro contiene valores específicos por cada campo.
+Claves primarias: Es el identificador principal de cada tabla.
+Claves foráneas: Son campos en una tabla que establecen una relación con la clave primaria de otra tabla.
+Consultas: Son instrucciones utilizados para recuperar información se escriben en lenguaje como SQL
+Índices: Son estructuras adicionales que mejoran el rendimiento de búsqueda de datos.
+Vistas: Son consultas que actúan como tablas virtuales.
+
+¿Que es una base de datos centralizada?
+Es un contenedor que permite almacenar y administrar.
+Base de datos centralizada ( Todo en un solo servidor)
+
+Base de datos distribuida ( datos repartidos en múltiples nodos/servidores)
+Sistemas paralelos 
+Mejoran la velocidad de procesamiento y de E/S por que la cpu y los discos funcionan en paralelo.
+
+¿Por qué usar base de datos distribuidas?
+Motivaciones principales: Escalabilidad
+Alta disponibilidad
+Tolerancia a fallas
+Reducción de latencia (acercar los datos al usuario)
+
+Conceptos claves
+Nodo: Cada máquina que forma parte del sistema distribuido
+Cluster: Varios nodos que trabajan juntos.
+Replica: Copia de los datos en diferentes nodos.
+Particionamiento: Divide los datos para almacenarlos en diferentes nodos.
+Consistencia, Disponibilidad y Tolerancia a particiones: Explicar las limitaciones y elecciones que deben hacerse en un sistema distribuido.
+
+Arquitecturas Comunes
+Amo-esclavo: Un nodo principal(Master) y varios esclavos (slaves)
+Peer-to-peer: Todos los nodos son iguales
+Multi-master: varios nodos pueden ser "Master" y aceptar escrituras
+
+Replicación y sincronización 
+Replica sincrona vs asincrona
+Como los datos se mantienen actualizados entre nodos
+
+CLASE 3 - 26/03/2025
+MODELO DE BASE DE DATOS PARA ARQUITECTURA CENTRALIZADA
+COMPONENTES:
+Servidor Central:  Un único servidor que almacena la base de datos
+Clientes: Accedan al servidor central para consultar
+Caracteristicas:
+Centralización: Todos los datos se encuentran en un único lugar.
+Acceso: Los clientes se comunican directamente con el servidor
+Ventajas:
+Simplicidad: Fácil de manejar 
+Consistencia: Todos los clientes ven los mismos datos en todo momento
+Desventajas:
+Punto único de Fallo: Si el servidor central falla, toda la base de datos se vuelve inaccesible.
+Escalamiento limitado: Difícil de escalar.
+
+MODELO DE BASE DE DATOS PARA ARQUITECTURA DISTRIBUIDA
+Componentes principales
+Nodos distribuidos: Varios nodos que contienen partes de la base de datos.
+Red de comunicación: Permite la comunicación entre los nodos distribuidos.
+Características
+Distribución: Los datos se almacenan en múltiples nodos distribuidos
+Acceso: Los clientes pueden acceder mediante diferentes nodos.
+Ventajas
+Tolerancia a fallos: Menos propensos a fallas catastróficas por que no hay un solo punto de fallo.
+Escalamiento: Puede escalar fácilmente agregando más nodos.
+Desventajas
+Complejidad: Requiere una gestión y coordinación más complejidad
+Consistencia: A veces puede haber más problemas de consistencia debido a la distribución de datos.
+
+CLASE 4 - 28/03/2025
+Clasificación de bases de datos distribuida
+Según su distribución de datos:
+Fragmentadas: 
+Fragmentación Horizontal: Divide por filas según condiciones específicas. (Registros).
+Basada en cocciones de selección.
+
+Fragmentación vertical: Divide registros por columnas según condiciones especificas. (Atributos)
+Basada en encontrar conjuntos atribuidos a proyectar
+
+Fragmentación mixta: Combinación con Fermentación vertical con horizontal.
+
+REPLICAS
+Replica completa: Cada nodo posee un copia completa de los datos.
+Réplica parcial: Ciertos datos se replican según su necesidad.
+HÍBRIDAS 
+Se combina entre réplicas completas y replicas parcial. 
+
+SEGÚN LA HOMOGENEIDAD DEL SISTEMA 
+HOMOGÉNEAS 
+Todos los nodos se ejecutan el mismo tipo de software de gestión de base de datos.
+Heterogéneas 
+Nodos con diferentes sistemas de gestión de base de datos que interactúan mediante estándares comunes
+
+SEGÚN LA AUTONOMÍA DEL NODO
+Bases de datos federales
+Alta autonomía loca, cada nodo mantiene control propio de sus datos
+Base de datos multidatabase
+Colección de base de datos independientes que cooperan mediante acuerdos explícitos
+
+VENTAJAS DE BASES DE DATOS DISTRIBUIDAS
+Mayor disponibilidad y confiabilidad
+Escalabilidad eficiente
+Distribución de carga
+Flexibilidad y adaptación geográfica
